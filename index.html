@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=1920 height=1080 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -52,16 +52,16 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/FishGameWeb.loader.js";
+      var loaderUrl = buildUrl + "/Fish Game Web.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/FishGameWeb.data.br",
-        frameworkUrl: buildUrl + "/FishGameWeb.framework.js.br",
-        codeUrl: buildUrl + "/FishGameWeb.wasm.br",
+        dataUrl: buildUrl + "/Fish Game Web.data",
+        frameworkUrl: buildUrl + "/Fish Game Web.framework.js",
+        codeUrl: buildUrl + "/Fish Game Web.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "AmiSweetFang",
         productName: "FishGame",
-        productVersion: "1.0",
+        productVersion: "1.1",
         showBanner: unityShowBanner,
       };
 
@@ -98,11 +98,11 @@
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "1920px";
+        canvas.style.height = "1080px";
       }
 
-      canvas.style.background = "url('" + buildUrl + "/FishGameWeb.jpg') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/Fish Game Web.jpg') center / cover";
       document.querySelector("#unity-loading-bar").style.display = "block";
 
       var script = document.createElement("script");
